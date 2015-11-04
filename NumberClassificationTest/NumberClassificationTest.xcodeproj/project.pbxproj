@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53AC14721BEA4E160027A5FF /* MLPNeuralNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AC14711BEA4E160027A5FF /* MLPNeuralNet.m */; };
 		53D09D931BE9FCD100EF2FEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D09D921BE9FCD100EF2FEC /* main.m */; };
 		53D09D961BE9FCD100EF2FEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D09D951BE9FCD100EF2FEC /* AppDelegate.m */; };
 		53D09D991BE9FCD100EF2FEC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D09D981BE9FCD100EF2FEC /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53AC14701BEA4E160027A5FF /* MLPNeuralNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPNeuralNet.h; sourceTree = "<group>"; };
+		53AC14711BEA4E160027A5FF /* MLPNeuralNet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPNeuralNet.m; sourceTree = "<group>"; };
 		53D09D8E1BE9FCD100EF2FEC /* NumberClassificationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberClassificationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D09D921BE9FCD100EF2FEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		53D09D941BE9FCD100EF2FEC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +42,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53AC146F1BEA48070027A5FF /* MLPNeural */ = {
+			isa = PBXGroup;
+			children = (
+				53AC14701BEA4E160027A5FF /* MLPNeuralNet.h */,
+				53AC14711BEA4E160027A5FF /* MLPNeuralNet.m */,
+			);
+			name = MLPNeural;
+			sourceTree = "<group>";
+		};
 		53D09D851BE9FCD100EF2FEC = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +70,7 @@
 		53D09D901BE9FCD100EF2FEC /* NumberClassificationTest */ = {
 			isa = PBXGroup;
 			children = (
+				53AC146F1BEA48070027A5FF /* MLPNeural */,
 				53D09D941BE9FCD100EF2FEC /* AppDelegate.h */,
 				53D09D951BE9FCD100EF2FEC /* AppDelegate.m */,
 				53D09D971BE9FCD100EF2FEC /* ViewController.h */,
@@ -149,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53AC14721BEA4E160027A5FF /* MLPNeuralNet.m in Sources */,
 				53D09D991BE9FCD100EF2FEC /* ViewController.m in Sources */,
 				53D09D961BE9FCD100EF2FEC /* AppDelegate.m in Sources */,
 				53D09D931BE9FCD100EF2FEC /* main.m in Sources */,
@@ -300,6 +314,7 @@
 				53D09DA71BE9FCD100EF2FEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
