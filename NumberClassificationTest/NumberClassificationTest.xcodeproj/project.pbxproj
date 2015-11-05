@@ -19,6 +19,7 @@
 /* Begin PBXFileReference section */
 		53AC14701BEA4E160027A5FF /* MLPNeuralNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPNeuralNet.h; sourceTree = "<group>"; };
 		53AC14711BEA4E160027A5FF /* MLPNeuralNet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPNeuralNet.m; sourceTree = "<group>"; };
+		53AC14741BEB4E7E0027A5FF /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		53D09D8E1BE9FCD100EF2FEC /* NumberClassificationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberClassificationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D09D921BE9FCD100EF2FEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		53D09D941BE9FCD100EF2FEC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +52,14 @@
 			name = MLPNeural;
 			sourceTree = "<group>";
 		};
+		53AC14731BEB4E640027A5FF /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				53AC14741BEB4E7E0027A5FF /* Common.h */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		53D09D851BE9FCD100EF2FEC = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +79,7 @@
 		53D09D901BE9FCD100EF2FEC /* NumberClassificationTest */ = {
 			isa = PBXGroup;
 			children = (
+				53AC14731BEB4E640027A5FF /* Util */,
 				53AC146F1BEA48070027A5FF /* MLPNeural */,
 				53D09D941BE9FCD100EF2FEC /* AppDelegate.h */,
 				53D09D951BE9FCD100EF2FEC /* AppDelegate.m */,
