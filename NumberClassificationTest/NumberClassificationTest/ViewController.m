@@ -21,26 +21,34 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    double assistant = 0.1f;
+    double assistant = 0.05f;
     
     double threshold = getRandFloat(-0.5f, -0.1f);
     
     double w1 = getRandFloat(-0.5f, 0.5f);
     double w2 = getRandFloat(-0.5f, 0.5f);
     
-    int x1 = 1;
-    int x2 = 0;
-    int expectation = 1;
-    
-    double sample[] = {x1, x2};
+    int samples[4][3] = {{0,0,0},{1,0,0},{0,1,0},{1,1,1}};
     
     NSArray *netConfig = @[@2, @1];
     
+    int correctCount = 0;
+    int incorrectCount = 0;
     
-    for (int i = 0; i < 10; ++i)
+    for (int i = 0; i < 100; ++i)
     {
+        NSLog(@"[%d]=========================================",i);
+        
+        int selectCase = getRandInt(0, 3);
+        NSLog(@"selectCase:%d",selectCase);
+        int x1 = samples[selectCase][0];
+        int x2 = samples[selectCase][1];
+        int expectation = samples[selectCase][2];
+        
+        NSLog(@"sample x1:%d, x2:%d, expectation:%d",x1,x2,expectation);
         NSLog(@"threshold:%f, w1:%f, w2:%f",threshold,w1,w2);
         
+        double sample[] = {x1, x2};
         double wts[] = {threshold, w1, w2};
         
         NSData *weights = [NSData dataWithBytes:wts length:sizeof(wts)];
@@ -67,22 +75,24 @@
         int error = expectation - result;
         if (error != 0) {
             NSLog(@"오답");
+            ++incorrectCount;
             // 에러 발생 가중치 보정하기
             w1 += assistant * x1 * error;
             w2 += assistant * x2 * error;
         }else{
             NSLog(@"정답");
+            ++correctCount;
         }
         
-        NSLog(@"=========================================");
+        NSLog(@"오답횟수:%d, 정답횟수:%d",incorrectCount,correctCount);
     }
     
-    // --TODO 1
-    // --앞으로 할것 이상태에서 http://destiny738.tistory.com/m/post/455 참고하여
-    // --2-1 network 에서 가중치 학습으로 로직추가하기
-    // TODO 2
-    // 1이 완료된다면 sample 경우의수를 전부다 컨테이너에 넣고 루프를 수행할때마다 선택해서 수행하게 변경하기
-    
+    // TODO 3
+    // 데이터셋 개수 늘러서 테스트하기
+    // TODO 4
+    // 데이터셋 클래스 구조 만들기.
+    // TODO 5
+    // MNIST텍스쳐 데이터 가져오기
 }
 
 - (void)didReceiveMemoryWarning {
