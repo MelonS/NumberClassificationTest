@@ -21,9 +21,9 @@ static float getRandFloat( float imin, float imax )
     return imin + (imax-imin)*randFloat() ;
 }
 
-// between low and (high-1)
-static int getRandInt( int low, int high )
+static int getRandInt( int low, int high ) // low ~ high ex)0,3 -> 0,1,2,3
 {
+    high += 1;
     return low + arc4random() % (high-low) ; // Do not talk to me
     // about "modulo bias" unless you're writing a casino generator
     // or if the "range" between high and low is around 1 million.
